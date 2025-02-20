@@ -5,4 +5,4 @@ sudo apt install -y build-essential pkg-config libssl-dev git-all protobuf-compi
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source $HOME/.cargo/env
 rustup target add riscv32i-unknown-none-elf
-yes | curl -s https://cli.nexus.xyz/ | sh
+tmux new -d -s nexus "curl https://cli.nexus.xyz/ | sh" && tmux a -t nexus
